@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="theme-color" content="#040406">
+  <title>URBAN MEX — Panel de Control</title>
+
+  <link rel="icon" type="image/png" href="assets/logo.png">
+  <link rel="apple-touch-icon" href="assets/logo.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+  <!-- ENCABEZADO DEL PANEL -->
+  <header class="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="admin.html" class="brand-wrapper"
+          style="display:flex; align-items:center; gap:10px; text-decoration:none;">
+          <img src="assets/logo.png" alt="URBAN MEX" class="brand-logo-img"
+            style="height:36px; width:auto; filter:drop-shadow(0 0 8px rgba(255,30,39,0.4));">
+          <div>
+            <span class="dynamic-store-name"
+              style="display:block; font-size:0.82rem; font-weight:800; color:var(--text-main); letter-spacing:0.04em;">URBAN
+              MEX</span>
+            <span
+              style="display:block; font-size:0.68rem; font-weight:600; color:var(--red-primary); text-transform:uppercase; letter-spacing:0.1em;">Panel
+              Admin</span>
+          </div>
+        </a>
+
+        <div class="admin-header-actions">
+          <a href="index.html" class="icon-btn" title="Ver Tienda">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="15" height="15">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+            </svg>
+            <span>Ver Tienda</span>
+          </a>
+          <button type="button" class="icon-btn" id="btnLogout" title="Cerrar Sesión" style="display: none;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="15" height="15">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M15.75 9V5.25A2.25 2.25 0 0013.5 3h-6a2.25 2.25 0 00-2.25 2.25v13.5A2.25 2.25 0 007.5 21h6a2.25 2.25 0 002.25-2.25V15M12 9l-3 3m0 0l3 3m-3-3h12.75" />
+            </svg>
+            <span>Salir</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- PANTALLA 1: LOGIN CON CLAVE -->
+  <div class="container" id="loginScreen" style="display: block;">
+    <div class="login-container">
+      <div class="login-logo-wrap">
+        <img src="assets/logo.png" alt="URBAN MEX" class="login-logo-img" style="position:relative; z-index:2;">
+      </div>
+
+      <h2 style="font-size:1.1rem; font-weight:800; margin-bottom:4px; color:var(--text-main); letter-spacing:-0.01em;">
+        Acceso al Panel
+      </h2>
+      <p style="font-size:0.8rem; color:var(--text-secondary); margin-bottom:22px;">
+        Ingresa tu PIN para administrar el catálogo.
+      </p>
+
+      <form id="loginForm">
+        <div class="form-group" style="text-align:left;">
+          <label class="form-label" for="loginPin" style="color:var(--text-secondary); font-size:0.78rem;">
+            PIN de Acceso
+          </label>
+          <input type="password" id="loginPin" class="form-control" placeholder="••••" required inputmode="numeric"
+            autocomplete="current-password"
+            style="text-align:center; font-size:1.4rem; letter-spacing:0.3em; font-weight:700;">
+          <small style="color:var(--text-muted); font-size:0.74rem; display:block; margin-top:6px; text-align:center;">
+            PIN por defecto: <strong style="color:var(--red-primary);">1234</strong>
+          </small>
+        </div>
+
+        <button type="submit" class="btn btn-primary" style="width:100%; margin-top:8px; padding:12px;">
+          Ingresar
+        </button>
+      </form>
+
+      <div style="margin-top:20px; padding-top:14px; border-top:1px solid var(--border-light);">
+        <a href="index.html"
+          style="font-size:0.78rem; color:var(--text-muted); text-decoration:none; display:inline-flex; align-items:center; gap:5px;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" />
+          </svg>
+          Volver al catálogo
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- PANTALLA 2: PANEL DE ADMINISTRACIÓN -->
+  <main class="container" id="adminDashboard" style="display: none; padding-top: 24px; padding-bottom: 60px;">
+
+    <div
+      style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:10px; margin-bottom:10px;">
+      <div>
+        <h1 style="font-size:1.3rem; font-weight:800; color:var(--text-main); letter-spacing:-0.02em;">Administración
+        </h1>
+        <p style="font-size:0.78rem; color:var(--text-muted); margin-top:2px;">Gestiona camisas, marcas y configuración
+          de la tienda.</p>
+      </div>
+      <div style="display:flex; gap:6px; flex-wrap:wrap;">
+        <span class="stat-pill">
+          <span id="statProductsCount">0</span> camisas
+        </span>
+        <span class="stat-pill">
+          <span id="statBrandsCount">0</span> marcas
+        </span>
+      </div>
+    </div>
+
+    <!-- Tabs de Navegación -->
+    <nav class="admin-nav-tabs" role="tablist">
+      <button type="button" class="admin-tab-btn active" data-tab="tabProducts" role="tab" aria-selected="true">
+        Camisas
+      </button>
+      <button type="button" class="admin-tab-btn" data-tab="tabBrands" role="tab" aria-selected="false">
+        Marcas
+      </button>
+      <button type="button" class="admin-tab-btn" data-tab="tabSettings" role="tab" aria-selected="false">
+        Configuración
+      </button>
+    </nav>
+
+    <!-- TAB 1: CAMISAS -->
+    <section id="tabProducts" class="admin-tab-content">
+
+      <div class="admin-card" id="formCard">
+        <div class="admin-card-header">
+          <h2 class="admin-card-title" id="formTitle">Subir Camisa</h2>
+          <button type="button" class="btn btn-secondary btn-sm" id="btnCancelEdit" style="display:none;">
+            Cancelar
+          </button>
+        </div>
+
+        <form id="productForm">
+          <input type="hidden" id="editProductId" value="">
+
+          <div class="form-group">
+            <label class="form-label">Tipo de camisa:</label>
+            <div class="radio-toggle-group">
+              <div class="radio-toggle-item">
+                <input type="radio" id="typeBrand" name="productType" value="brand" checked>
+                <label for="typeBrand">Por Marca</label>
+              </div>
+              <div class="radio-toggle-item">
+                <input type="radio" id="typeCustom" name="productType" value="custom">
+                <label for="typeCustom">Personalizada</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group" id="brandSelectGroup">
+            <label class="form-label" for="productBrand">Marca Asignada:</label>
+            <div style="display:flex; gap:8px;">
+              <select id="productBrand" class="form-control" style="flex:1;"></select>
+              <button type="button" class="btn btn-secondary btn-sm" id="btnQuickAddBrand" style="white-space:nowrap;">
+                + Marca
+              </button>
+            </div>
+          </div>
+
+          <div class="form-row two-cols">
+            <div class="form-group">
+              <label class="form-label" for="productName">Nombre *</label>
+              <input type="text" id="productName" class="form-control" placeholder="Ej. Camisa 8" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="productPrice">Precio (<span class="currency-label">S/</span>) *</label>
+              <input type="number" id="productPrice" class="form-control" step="0.01" min="0" inputmode="decimal"
+                placeholder="0.00" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="productDesc">
+              Descripción corta <small>(Tallas, tela, colores)</small> *
+            </label>
+            <textarea id="productDesc" class="form-control" rows="2"
+              placeholder="Ej. Tallas: S, M, L, XL • 100% Algodón" required></textarea>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Foto de la Camisa <small>(Opcional — si lo dejas vacío dirá "Sin
+                imagen")</small>:</label>
+
+            <div class="upload-dropzone" id="dropzoneBox">
+              <div class="upload-preview" id="imagePreviewContainer">
+                <img id="imagePreviewImg" src="" alt="Previsualización">
+              </div>
+
+              <div id="dropzonePrompt">
+                <svg class="upload-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M6.827 6.175A2.31 2.31 0 015.186 7.23c-.38.054-.757.112-1.134.175C2.999 7.58 2.25 8.507 2.25 9.574V18a2.25 2.25 0 002.25 2.25h15A2.25 2.25 0 0021.75 18V9.574c0-1.067-.75-1.994-1.802-2.169a47.865 47.865 0 00-1.134-.175 2.31 2.31 0 01-1.64-1.055l-.822-1.316a2.192 2.192 0 00-1.736-1.039 48.774 48.774 0 00-5.232 0 2.192 2.192 0 00-1.736 1.039l-.821 1.316z" />
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M16.5 12.75a4.5 4.5 0 11-9 0 4.5 4.5 0 019 0zM18.75 10.5h.008v.008h-.008V10.5z" />
+                </svg>
+                <p style="font-size:0.85rem; font-weight:600; color:var(--text-main); margin-bottom:4px;">Elegir foto
+                  del dispositivo</p>
+                <span class="btn-upload-file">Seleccionar imagen</span>
+              </div>
+
+              <input type="file" id="fileInput" accept="image/*" style="display:none;">
+            </div>
+
+            <div
+              style="margin-top:8px; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:8px;">
+              <details style="font-size:0.78rem; color:var(--text-muted); flex:1;">
+                <summary style="cursor:pointer; user-select:none;">O pegar URL de imagen directamente</summary>
+                <div style="margin-top:8px;">
+                  <input type="url" id="productImageUrl" class="form-control"
+                    placeholder="https://ejemplo.com/foto.jpg">
+                </div>
+              </details>
+              <button type="button" class="btn btn-secondary btn-sm" id="btnRemoveImage" style="display:none;">
+                Quitar foto ("Sin imagen")
+              </button>
+            </div>
+          </div>
+
+          <div style="display:flex; gap:8px; margin-top:18px;">
+            <button type="submit" class="btn btn-primary" id="btnSubmitProduct" style="flex:1;">
+              Guardar Camisa
+            </button>
+            <button type="button" class="btn btn-secondary" id="btnResetForm">
+              Limpiar
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <!-- Inventario -->
+      <div class="admin-card">
+        <div class="admin-card-header">
+          <h2 class="admin-card-title">Inventario</h2>
+        </div>
+
+        <div style="margin-bottom:12px; display:flex; gap:8px; flex-wrap:wrap;">
+          <input type="text" id="adminSearchInput" class="form-control" placeholder="Buscar camisa..."
+            style="flex:1; min-width:160px;">
+          <select id="adminFilterType" class="form-control" style="width:auto;">
+            <option value="all">Todas</option>
+            <option value="brand">Por Marca</option>
+            <option value="custom">Personalizadas</option>
+          </select>
+        </div>
+
+        <div class="admin-items-list" id="adminProductsList"></div>
+      </div>
+    </section>
+
+    <!-- TAB 2: MARCAS -->
+    <section id="tabBrands" class="admin-tab-content" style="display:none;">
+      <div class="admin-card">
+        <div class="admin-card-header">
+          <h2 class="admin-card-title">Casillas de Marcas</h2>
+        </div>
+
+        <form id="brandForm" style="display:flex; gap:8px; margin-bottom:18px;">
+          <input type="text" id="newBrandName" class="form-control" placeholder="Nueva marca (ej. Puma, Lacoste)"
+            required style="flex:1;">
+          <button type="submit" class="btn btn-primary" style="white-space:nowrap;">
+            + Agregar
+          </button>
+        </form>
+
+        <div class="brand-manager-grid" id="adminBrandsList"></div>
+      </div>
+    </section>
+
+    <!-- TAB 3: CONFIGURACIÓN -->
+    <section id="tabSettings" class="admin-tab-content" style="display:none;">
+      <div class="admin-card">
+        <div class="admin-card-header">
+          <h2 class="admin-card-title">Configuración de la Tienda</h2>
+        </div>
+
+        <form id="settingsForm">
+          <div class="form-group">
+            <label class="form-label" for="settingStoreName">Nombre de la Tienda:</label>
+            <input type="text" id="settingStoreName" class="form-control" placeholder="URBAN MEX" required>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="settingStoreTagline">Eslogan:</label>
+            <input type="text" id="settingStoreTagline" class="form-control" placeholder="Te lo hacen realidad!">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="settingWhatsapp">Número WhatsApp <small>(con código de país, ej.
+                51999888777)</small>:</label>
+            <input type="text" id="settingWhatsapp" class="form-control" inputmode="numeric" placeholder="51900000000"
+              required>
+          </div>
+
+          <div class="form-row two-cols">
+            <div class="form-group">
+              <label class="form-label" for="settingCurrency">Símbolo de Moneda:</label>
+              <input type="text" id="settingCurrency" class="form-control" placeholder="S/ ">
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="settingAdminPin">Clave de Acceso (PIN):</label>
+              <input type="text" id="settingAdminPin" class="form-control" placeholder="1234" required>
+            </div>
+          </div>
+
+          <div style="margin-top:16px;">
+            <button type="submit" class="btn btn-primary">
+              Guardar Cambios
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <div class="admin-card" style="border-color: rgba(239, 68, 68, 0.3);">
+        <h3 style="font-size:0.92rem; font-weight:700; color:#fca5a5; margin-bottom:4px;">
+          Restablecer Catálogo Inicial
+        </h3>
+        <p style="font-size:0.78rem; color:var(--text-muted); margin-bottom:12px;">
+          Restaura Camisa 1 a Camisa 7 con precios en S/ 0.00 y sin imágenes.
+        </p>
+        <button type="button" class="btn btn-danger btn-sm" id="btnResetDefaults">
+          Restablecer Catálogo
+        </button>
+      </div>
+    </section>
+
+  </main>
+
+  <div class="toast-container" id="toastContainer"></div>
+
+  <script src="js/store.js"></script>
+  <script src="js/admin.js"></script>
+</body>
+
+</html>

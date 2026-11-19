@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="description"
+    content="URBAN MEX — Te lo hacen realidad. Catálogo exclusivo de camisas por marca y personalizadas.">
+  <meta name="theme-color" content="#040406">
+  <title>URBAN MEX | Te Lo Hacen Realidad</title>
+
+  <!-- ══════════════════════════════════════════════════
+       BANNER PARA WHATSAPP, INSTAGRAM Y REDES (OPEN GRAPH)
+       ══════════════════════════════════════════════════ -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="URBAN MEX">
+  <meta property="og:title" content="URBAN MEX | Te Lo Hacen Realidad">
+  <meta property="og:description" content="Catálogo oficial de camisas por marca y diseños personalizados a tu medida.">
+  <!-- Si tu imagen es .jpg, cambia banner.png por banner.jpg en las dos líneas con assets/banner -->
+  <meta property="og:image" content="assets/banner.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="URBAN MEX | Te Lo Hacen Realidad">
+  <meta name="twitter:description"
+    content="Catálogo oficial de camisas por marca y diseños personalizados a tu medida.">
+  <meta name="twitter:image" content="assets/banner.png">
+
+  <link rel="icon" type="image/png" href="assets/logo.png">
+  <link rel="apple-touch-icon" href="assets/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,700&family=Space+Grotesk:wght@500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       HERO CINEMÁTICO 3D CON ONDA EXPANSIVA Y LÁSER
+       ═══════════════════════════════════════════════════════════ -->
+  <section class="hero-ultra" id="heroSection">
+    <div class="hero-ambient-light"></div>
+    <div class="hero-grid-bg"></div>
+    <div class="hero-spotlight"></div>
+
+    <div class="hero-content">
+      <div class="hero-logo-wrap" id="heroLogoContainer">
+        <div class="logo-shockwave"></div>
+        <div class="logo-shockwave delay-1"></div>
+        <div class="logo-aura"></div>
+        <div class="logo-cyber-ring"></div>
+        <img src="assets/logo.png" alt="URBAN MEX — Te lo hacen realidad" class="hero-logo-img" id="mainHeroLogo"
+          draggable="false">
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       CINTA DE TEXTO RODANTE MINIMALISTA
+       ═══════════════════════════════════════════════════════════ -->
+  <div class="marquee-strip" aria-label="Texto animado de la marca">
+    <div class="marquee-track">
+      <div class="marquee-content">
+        <span>TE LO HACEN REALIDAD</span>
+        <span class="marquee-dot">✦</span>
+        <span class="highlight">URBAN MEX</span>
+        <span class="marquee-dot">✦</span>
+        <span>CAMISAS EXCLUSIVAS</span>
+        <span class="marquee-dot">✦</span>
+        <span class="highlight">ESTILO URBANO</span>
+        <span class="marquee-dot">✦</span>
+        <span>DISEÑOS PERSONALIZADOS</span>
+        <span class="marquee-dot">✦</span>
+      </div>
+      <div class="marquee-content" aria-hidden="true">
+        <span>TE LO HACEN REALIDAD</span>
+        <span class="marquee-dot">✦</span>
+        <span class="highlight">URBAN MEX</span>
+        <span class="marquee-dot">✦</span>
+        <span>CAMISAS EXCLUSIVAS</span>
+        <span class="marquee-dot">✦</span>
+        <span class="highlight">ESTILO URBANO</span>
+        <span class="marquee-dot">✦</span>
+        <span>DISEÑOS PERSONALIZADOS</span>
+        <span class="marquee-dot">✦</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       NAVEGACIÓN Y FILTROS ULTRA MINIMALISTAS (ESTILO EDITORIAL)
+       ═══════════════════════════════════════════════════════════ -->
+  <section class="control-deck-section">
+    <div class="container">
+      <div class="minimal-nav-wrapper">
+
+        <!-- 1. Pestañas Tipográficas Limpias con Línea Luminosa -->
+        <div class="segmented-control" role="tablist" aria-label="Categoría de camisas">
+          <button type="button" class="segment-btn active" data-category="brand" role="tab" aria-selected="true">
+            <span>Por Marca</span>
+          </button>
+          <button type="button" class="segment-btn" data-category="custom" role="tab" aria-selected="false">
+            <span>Personalizadas</span>
+          </button>
+        </div>
+
+        <!-- 2. Buscador Ultra Fino con Contador Integrado Adentro -->
+        <div class="search-bar-unified">
+          <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+            aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+          </svg>
+          <input type="search" id="searchInput" class="search-input-clean" placeholder="Buscar modelo, talla o marca..."
+            autocomplete="off">
+          <span class="count-inline-badge" id="catalogCount" aria-live="polite">Colección</span>
+        </div>
+
+        <!-- 3. Cinta Horizontal de Marcas Ultra Limpia -->
+        <div class="brand-filters-wrapper" id="brandFiltersWrapper"></div>
+
+        <!-- 4. Banner Personalizadas Minimalista -->
+        <div class="custom-banner" id="customBanner" style="display:none;">
+          <div class="custom-banner-inner">
+            <span class="custom-dot"></span>
+            <p><strong>Diseños a tu medida:</strong> Estampamos tu propio arte o idea. Toca cualquier modelo para
+              cotizar por WhatsApp.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       CATÁLOGO DE CAMISAS
+       ═══════════════════════════════════════════════════════════ -->
+  <main class="catalog-section">
+    <div class="container">
+      <div class="products-grid" id="productsGrid"></div>
+    </div>
+  </main>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       MODAL DE DETALLE
+       ═══════════════════════════════════════════════════════════ -->
+  <div class="modal-overlay" id="productModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-sheet">
+      <button type="button" class="modal-close-btn" id="modalCloseBtn" aria-label="Cerrar">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+
+      <div class="modal-img-wrap" id="modalImgWrap">
+        <img id="modalImg" src="" alt="">
+      </div>
+
+      <div style="margin-bottom:8px;">
+        <span class="badge-brand" id="modalBrandBadge">Marca</span>
+      </div>
+
+      <h2 id="modalTitle"
+        style="font-size:1.35rem; font-weight:800; margin-bottom:8px; color:var(--text-main); letter-spacing:-0.02em;">
+      </h2>
+      <p id="modalDesc" style="font-size:0.88rem; color:var(--text-secondary); line-height:1.6; margin-bottom:22px;">
+      </p>
+
+      <div
+        style="display:flex; align-items:baseline; justify-content:space-between; margin-bottom:20px; padding-top:16px; border-top:1px solid var(--border-light);">
+        <span
+          style="font-size:0.72rem; color:var(--text-muted); font-weight:700; text-transform:uppercase; letter-spacing:0.12em;">Precio</span>
+        <span class="product-price" style="font-size:1.45rem;"><span id="modalPrice"></span></span>
+      </div>
+
+      <a id="modalWaBtn" href="#" target="_blank" rel="noopener noreferrer" class="btn-whatsapp"
+        style="padding:14px; font-size:0.92rem;">
+        <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+          <path
+            d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.312.045-.694.076-2.125-.515-1.503-.62-2.457-2.148-2.532-2.247-.074-.1-1.07-1.423-1.07-2.715 0-1.291.678-1.928.92-2.189.243-.261.53-.326.708-.326.178 0 .356.002.51.01.164.008.384-.062.6.457.222.533.757 1.848.824 1.983.067.135.111.293.023.47-.089.178-.133.289-.264.444-.131.155-.276.347-.394.466-.131.132-.268.276-.115.539.153.262.68 1.119 1.46 1.814 1.002.893 1.847 1.17 2.108 1.301.261.13.414.11.567-.066.153-.177.653-.761.826-1.023.173-.262.348-.218.587-.13.239.088 1.517.716 1.777.846.26.13.434.195.499.304.065.109.065.632-.079 1.037z" />
+        </svg>
+        <span>Pedir por WhatsApp</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       CIERRE DE PÁGINA & FOOTER ULTRA LUXURY
+       ═══════════════════════════════════════════════════════════ -->
+  <footer class="site-footer-new">
+    <div class="footer-glow-line"></div>
+    <div class="container">
+
+      <div class="footer-vip-banner">
+        <div class="vip-status-pill">
+          <span class="live-pulse-dot"></span>
+          <span>Catálogo Oficial Activo</span>
+        </div>
+        <h3 class="vip-title">¿Tienes una idea o diseño exclusivo en mente?</h3>
+        <p class="vip-subtitle">Seleccionamos las mejores marcas y personalizamos prendas con acabado profesional.</p>
+      </div>
+
+      <div class="footer-new-inner">
+        <div class="footer-brand-block">
+          <div class="footer-logo-halo-box">
+            <img src="assets/logo.png" alt="URBAN MEX" class="footer-logo-mini">
+          </div>
+          <div>
+            <p class="footer-copy-text">&copy; <span id="currentYear"></span> <strong class="dynamic-store-name">URBAN
+                MEX</strong> • Todos los derechos reservados</p>
+            <span class="footer-tagline-red" id="dynamicTagline">✦ Te lo hacen realidad!</span>
+          </div>
+        </div>
+
+        <div class="footer-right-meta">
+          <a href="#heroSection" class="back-to-top-btn" title="Subir al inicio">
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5" />
+            </svg>
+            <span>Subir</span>
+          </a>
+          <a href="admin.html" class="footer-admin-link" title="Panel">⚙</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/store.js"></script>
+  <script src="js/app.js"></script>
+  <script>
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+    const logoWrap = document.getElementById('heroLogoContainer');
+    if (logoWrap && window.matchMedia('(pointer: fine)').matches) {
+      let raf;
+      logoWrap.addEventListener('mousemove', (e) => {
+        cancelAnimationFrame(raf);
+        raf = requestAnimationFrame(() => {
+          const r = logoWrap.getBoundingClientRect();
+          const x = (e.clientX - r.left - r.width / 2) / (r.width / 2);
+          const y = (e.clientY - r.top - r.height / 2) / (r.height / 2);
+          const tX = -(y * 14).toFixed(2);
+          const tY = (x * 14).toFixed(2);
+          logoWrap.style.transform = `perspective(1000px) rotateX(${tX}deg) rotateY(${tY}deg) scale3d(1.05, 1.05, 1.05)`;
+        });
+      });
+
+      logoWrap.addEventListener('mouseleave', () => {
+        cancelAnimationFrame(raf);
+        logoWrap.style.transform = '';
+      });
+    }
+  </script>
+</body>
+
+</html>
